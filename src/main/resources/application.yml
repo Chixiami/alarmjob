@@ -1,0 +1,34 @@
+# 日志输出配置
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger- %msg%n"
+    level: debug
+  file:
+    path: "."
+    name: "springboot.log"
+
+# 批处理运行时间
+runtime : 0 * * * * ?
+
+# 邮件发送配置
+spring:
+  mail:
+    host: smtp.qq.com
+    # 发件人邮箱地址
+    username: xxx@xxx.com
+    # 发件人邮箱授权码
+    password: xxx
+    # 编码格式
+    default-encoding: utf-8
+    # 收件人邮箱地址
+    toEmailAddress: xxx@xxx.com
+    # 邮件内容
+    emailContext: 测试内容
+    # 邮件主题
+    subject: 监控报警
+    # 传输协议
+    protocol: smtp
+    # 邮件接收扫描配置
+    scanMailHost: imap.qq.com
+    scanMailUsername: xxx@xxx.com
+    scanMailPassword: xxx
